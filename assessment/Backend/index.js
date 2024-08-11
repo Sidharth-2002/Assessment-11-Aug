@@ -20,7 +20,7 @@ app.post("/add", async (req, res) => {
   }
 });
 
-app.delete("/get/:id", async (req, res) => {
+app.delete("/delete/:id", async (req, res) => {
   try {
     await EmployeeModel.findByIdAndDelete(req.params.id);
     res.send({ message: "Employee deleted" });
